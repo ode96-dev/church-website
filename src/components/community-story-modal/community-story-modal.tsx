@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { X, Quote, Users } from "lucide-react";
+import { X, Quote } from "lucide-react";
 
 interface CommunityStoryModalProps {
   isOpen: boolean;
@@ -57,9 +57,6 @@ export function CommunityStoryModal({
 
         <div className="p-4 rounded-xl bg-[#1D1A17] border border-white/5 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-[#E8C48E]/10 text-[#E8C48E] flex items-center justify-center">
-              <Users className="w-5 h-5" />
-            </div>
             <div>
               <p className="text-xs font-medium text-white">
                 Find a Life Group near you
