@@ -230,7 +230,7 @@ export function Hero({
             transition={{ duration: 0.9, delay: 0.5, ease: EASE }}
             role="region"
             aria-label="Quick links"
-            className="-mx-5 -my-3 flex scroll-pl-5 snap-x snap-mandatory items-stretch gap-3 overflow-x-auto px-5 py-3 [scrollbar-width:none] sm:mx-0 sm:my-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:py-0 lg:grid-cols-4 lg:gap-4 [&::-webkit-scrollbar]:hidden"
+            className="-mx-5 -my-3 flex scroll-pl-5 snap-x snap-mandatory items-stretch gap-3 overflow-x-auto px-5 py-3 scrollbar-none sm:mx-0 sm:my-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:py-0 lg:grid-cols-4 lg:gap-4 [&::-webkit-scrollbar]:hidden"
           >
             <SpringCard
               intensity={4}

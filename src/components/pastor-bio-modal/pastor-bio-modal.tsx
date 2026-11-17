@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import { X, Mail } from "lucide-react";
-import { Starburst } from "../star-burst/star-burst";
 
 interface PastorBioModalProps {
   isOpen: boolean;
@@ -48,7 +47,6 @@ export function PastorBioModal({
           <div className="md:col-span-3 p-6 sm:p-8 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#E8C48E] font-medium mb-1">
-                <Starburst className="w-3.5 h-3.5" />
                 <span>Community Pastor</span>
               </div>
               <h3 className="text-2xl font-light text-white">Hannah Vance</h3>

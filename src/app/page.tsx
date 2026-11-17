@@ -16,47 +16,44 @@ export default function HomePage() {
   const [isPastorBioOpen, setIsPastorBioOpen] = useState(false);
   const [isCommunityStoryOpen, setIsCommunityStoryOpen] = useState(false);
 
-  <SmoothScrollProvider>
-    <div className="relative min-h-screen bg-[#121110] text-[#EDE8E3] selection:bg-[#E8C48E]/30 selection:text-[#FFF8EE]">
-      <Hero
-        onOpenLiveStream={() => setIsLiveStreamOpen(true)}
-        onOpenPlanVisit={() => setIsPlanVisitOpen(true)}
-        onOpenPastorBio={() => setIsPastorBioOpen(true)}
-        onOpenCommunityStory={() => setIsCommunityStoryOpen(true)}
-      />
-
-      <PlanVisitModal
-        isOpen={isPlanVisitOpen}
-        onClose={() => setIsPlanVisitOpen(false)}
-      />
-
-      <LiveStreamModal
-        isOpen={isLiveStreamOpen}
-        onClose={() => setIsLiveStreamOpen(false)}
-      />
-
-      <PrayerDrawer
-        isOpen={isPrayerOpen}
-        onClose={() => setIsPrayerOpen(false)}
-      />
-
-      <PastorBioModal
-        isOpen={isPastorBioOpen}
-        onClose={() => setIsPastorBioOpen(false)}
-        onPlanVisit={() => {
-          setIsPastorBioOpen(false);
-          setIsPlanVisitOpen(true);
-        }}
-      />
-
-      <CommunityStoryModal
-        isOpen={isCommunityStoryOpen}
-        onClose={() => setIsCommunityStoryOpen(false)}
-        onExploreGroups={() => {
-          const el = document.getElementById("ministries");
-          el?.scrollIntoView({ behavior: "smooth" });
-        }}
-      />
-    </div>
-  </SmoothScrollProvider>;
+  return (
+    <SmoothScrollProvider>
+      <div className="relative min-h-screen bg-[#121110] text-[#EDE8E3] selection:bg-[#E8C48E]/30 selection:text-[#FFF8EE]">
+        <Hero
+          onOpenLiveStream={() => setIsLiveStreamOpen(true)}
+          onOpenPlanVisit={() => setIsPlanVisitOpen(true)}
+          onOpenPastorBio={() => setIsPastorBioOpen(true)}
+          onOpenCommunityStory={() => setIsCommunityStoryOpen(true)}
+        />
+        <PlanVisitModal
+          isOpen={isPlanVisitOpen}
+          onClose={() => setIsPlanVisitOpen(false)}
+        />
+        <LiveStreamModal
+          isOpen={isLiveStreamOpen}
+          onClose={() => setIsLiveStreamOpen(false)}
+        />
+        <PrayerDrawer
+          isOpen={isPrayerOpen}
+          onClose={() => setIsPrayerOpen(false)}
+        />
+        <PastorBioModal
+          isOpen={isPastorBioOpen}
+          onClose={() => setIsPastorBioOpen(false)}
+          onPlanVisit={() => {
+            setIsPastorBioOpen(false);
+            setIsPlanVisitOpen(true);
+          }}
+        />
+        <CommunityStoryModal
+          isOpen={isCommunityStoryOpen}
+          onClose={() => setIsCommunityStoryOpen(false)}
+          onExploreGroups={() => {
+            const el = document.getElementById("ministries");
+            el?.scrollIntoView({ behavior: "smooth" });
+          }}
+        />
+      </div>
+    </SmoothScrollProvider>
+  );
 }
