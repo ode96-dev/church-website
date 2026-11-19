@@ -8,6 +8,7 @@ import { PastorBioModal } from "@/components/pastor-bio-modal/pastor-bio-modal";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
 import { useState } from "react";
 import { CommunityStoryModal } from "@/components/community-story-modal/community-story-modal";
+import { AboutMission } from "@/components/about-us/about-mission";
 
 export default function HomePage() {
   const [isPlanVisitOpen, setIsPlanVisitOpen] = useState(false);
@@ -25,6 +26,9 @@ export default function HomePage() {
           onOpenPastorBio={() => setIsPastorBioOpen(true)}
           onOpenCommunityStory={() => setIsCommunityStoryOpen(true)}
         />
+
+        <AboutMission onPlanVisit={() => setIsPlanVisitOpen(true)} />
+
         <PlanVisitModal
           isOpen={isPlanVisitOpen}
           onClose={() => setIsPlanVisitOpen(false)}
