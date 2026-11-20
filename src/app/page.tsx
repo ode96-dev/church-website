@@ -11,6 +11,7 @@ import { CommunityStoryModal } from "@/components/community-story-modal/communit
 import { AboutMission } from "@/components/about-us/about-mission";
 import { SermonsShowcase } from "@/components/sermons-showcase/sermons-showcase";
 import { MinistryGrid } from "@/components/ministry-grid/ministry-grid";
+import { WorshipExperience } from "@/components/worship-experience/worship-experience";
 
 export default function HomePage() {
   const [isPlanVisitOpen, setIsPlanVisitOpen] = useState(false);
@@ -34,6 +35,11 @@ export default function HomePage() {
         <SermonsShowcase onOpenLiveModal={() => setIsLiveStreamOpen(true)} />
 
         <MinistryGrid />
+
+        <WorshipExperience
+          onPlanVisit={() => setIsPlanVisitOpen(true)}
+          onOpenLiveModal={() => setIsLiveStreamOpen(true)}
+        />
 
         <PlanVisitModal
           isOpen={isPlanVisitOpen}
