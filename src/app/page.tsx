@@ -10,6 +10,7 @@ import { useState } from "react";
 import { CommunityStoryModal } from "@/components/community-story-modal/community-story-modal";
 import { AboutMission } from "@/components/about-us/about-mission";
 import { SermonsShowcase } from "@/components/sermons-showcase/sermons-showcase";
+import { MinistryGrid } from "@/components/ministry-grid/ministry-grid";
 
 export default function HomePage() {
   const [isPlanVisitOpen, setIsPlanVisitOpen] = useState(false);
@@ -31,6 +32,8 @@ export default function HomePage() {
         <AboutMission onPlanVisit={() => setIsPlanVisitOpen(true)} />
 
         <SermonsShowcase onOpenLiveModal={() => setIsLiveStreamOpen(true)} />
+
+        <MinistryGrid />
 
         <PlanVisitModal
           isOpen={isPlanVisitOpen}
